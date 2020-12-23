@@ -1,0 +1,12 @@
+<p id="alert" class="text-danger"><%= alert %></p>
+<h1>Login</h1><%= form_tag sessions_path do |form| %>
+  <div class="field pl-4 pt-3">
+    <%= label_tag :email %> </br>
+    <%= text_field_tag :email %>
+  </div>  <div class="field pl-4">
+    <%= label_tag :password %> </br>
+    <%= password_field_tag :password %>
+  </div>  <div class="actions pl-4 pt-2">
+    <%= submit_tag "Login"%>
+  </div>
+<% end %>

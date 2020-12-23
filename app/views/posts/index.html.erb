@@ -1,0 +1,26 @@
+
+<h1>Posts</h1>
+
+<table class="ml-4 mt-4 mb-2">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><h6><%= post.name %></h6></td>
+        <td><%= link_to 'Edit', edit_post_path(post),  class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="ml-4">
+<%= link_to 'Back', root_path, class: "btn btn-primary" %>
+<%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
+</div>
